@@ -17,13 +17,7 @@ function Navbar() {
     setIsOpen(false);
   }, [location]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 40);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+ 
 
   const handleLogout = async () => {
     try {

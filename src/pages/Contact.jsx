@@ -3,8 +3,8 @@ import React,{ useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 import { useForm } from 'react-hook-form';
-//import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
-//import { db } from '../firebase/config';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { db } from '../firebase/config';
 
 function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);

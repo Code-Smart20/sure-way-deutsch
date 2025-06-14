@@ -12,7 +12,7 @@ function FeaturedCourses() {
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
+ {/** * useEffect(() => {
     const fetchCourses = async () => {
       try {
         const q = query(
@@ -38,6 +38,7 @@ function FeaturedCourses() {
 
     fetchCourses();
   }, []);
+  **/}
 
   // Fallback data if Firebase is not configured yet
   const fallbackCourses = [

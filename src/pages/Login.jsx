@@ -4,11 +4,11 @@ import { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
-//import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../contexts/AuthContext';
 import { FaEnvelope, FaLock } from 'react-icons/fa';
 
 function Login() {
-  //const { login, resetPassword } = useAuth();
+  const { login, resetPassword } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
   const { register, handleSubmit, formState: { errors }, getValues } = useForm();

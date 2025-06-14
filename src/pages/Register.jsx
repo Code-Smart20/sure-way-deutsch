@@ -5,11 +5,12 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
-//import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../contexts/AuthContext';
 import { FaEnvelope, FaLock, FaUser } from 'react-icons/fa';
 
 function Register() {
- // const { signup } = useAuth();
+ const {signup} = useAuth();
+
   const navigate = useNavigate();
   const { register, handleSubmit, formState: { errors }, watch } = useForm();
   
