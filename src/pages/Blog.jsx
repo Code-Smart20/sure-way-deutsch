@@ -1,4 +1,5 @@
 import React from "react"
+
 const posts = [
   {
     id: 1,
@@ -18,7 +19,13 @@ const posts = [
 
 export default function Blog() {
   return (
-    <div className="max-w-4xl mx-auto py-12 px-6">
+
+    <>
+       <title>Blog | DeutschAkademie - German Language School</title>
+        <meta name="description" content="Learn about DeutschAkademie, our teaching methodology, our expert teachers, and our mission to make German language learning effective and enjoyable." />
+        <meta name="keywords" content="about DeutschAkademie, German language school, German teachers, language teaching methodology, learn German Berlin" />
+      
+         <div className="max-w-4xl mx-auto py-12 px-6">
       <h1 className="text-4xl font-bold mb-8 text-center">Blog</h1>
 
       <div className="space-y-6">
@@ -36,5 +43,8 @@ export default function Blog() {
         ))}
       </div>
     </div>
+    
+    </>
+   
   );
 }
