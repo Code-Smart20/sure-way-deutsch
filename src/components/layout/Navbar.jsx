@@ -1,32 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import React, { useState} from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaBars, FaTimes, FaUserCircle } from 'react-icons/fa';
+import { FaBars, FaTimes} from 'react-icons/fa';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [currentUser, setCurrentUser] = useState(false);
-
-  const logout = () => {
-    setCurrentUser((user) => !user);
-  };
-
-  const location = useLocation(); // Corrected to use actual route location
-
-  useEffect(() => {
-    setIsOpen(false);
-  }, [location]);
-
- 
-
-  const handleLogout = async () => {
-    try {
-      await logout();
-    } catch (error) {
-      console.error('Logout failed:', error);
-    }
-  };
-
+  
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
@@ -36,9 +15,9 @@ function Navbar() {
   ];
 
   return (
-    <header className="fixed width-full px-4  top-0 left-0 right-0 h-20 z-50 transition-all duration-300 text-white bg-black flex items-center">
+    <header className="w-full px-4  top-20 left-0 right-0 h-20 z-50 transition-all duration-300 text-white bg-black flex items-center">
       <div className="container mx-auto px-4 flex justify-between items-center w-full">
-        <Link to="/" className="z-10 text-yellow-500 text-lg font-bold">
+        <Link to="/" className="z-10 text-lg font-bold">
           SURE-WAY-DEUTSCH
         </Link>
 
@@ -60,48 +39,20 @@ function Navbar() {
             </NavLink>
           ))}
 
-          {currentUser ? (
-            <div className="relative ml-4 group">
-              <button className="flex items-center space-x-2 px-4 py-2 rounded-md font-medium text-yellow-600 border border-yellow-600 bg-black hover:bg-yellow-100 hover:text-black">
-                <FaUserCircle />
-                <span>{currentUser.displayName || 'User'}</span>
-              </button>
-              <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-20 hidden group-hover:block">
-                <Link
-                  to="/dashboard"
-                  className="block px-4 py-2 text-sm text-black hover:bg-yellow-100"
-                >
-                  Dashboard
-                </Link>
-                <button
-                  onClick={handleLogout}
-                  className="w-full text-left px-4 py-2 text-sm text-black hover:bg-yellow-100"
-                >
-                  Logout
-                </button>
-              </div>
-            </div>
-          ) : (
             <div className="flex space-x-2 ml-4">
-              <Link
-                to="/login"
-                className="px-4 py-2 rounded-md border border-yellow-600 text-yellow-600 hover:bg-yellow-600 hover:text-white text-sm"
-              >
-                Login
-              </Link>
               <Link
                 to="/register"
                 className="px-4 py-2 rounded-md bg-yellow-600 text-white hover:bg-yellow-700 text-sm"
               >
-                Register
+                Enrol Today
               </Link>
             </div>
-          )}
+          
         </nav>
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden z-10 text-white bg-red-500"
+          className="md:hidden z-50 text-white bg-red-500"
           onClick={() => setIsOpen(!isOpen)}
           aria-label={isOpen ? 'Close Menu' : 'Open Menu'}
         >
@@ -124,6 +75,7 @@ function Navbar() {
                   <NavLink
                     key={link.path}
                     to={link.path}
+                    onClick={() => setIsOpen(false)}
                     className={({ isActive }) =>
                       `px-4 py-2 rounded-md font-medium text-lg ${
                         isActive
@@ -136,37 +88,17 @@ function Navbar() {
                   </NavLink>
                 ))}
 
-                {currentUser ? (
-                  <>
-                    <Link
-                      to="/dashboard"
-                      className="px-4 py-2 rounded-md font-medium text-lg text-white hover:text-yellow-500"
-                    >
-                      Dashboard
-                    </Link>
-                    <button
-                      onClick={handleLogout}
-                      className="px-4 py-2 rounded-md font-medium text-lg text-white hover:text-yellow-500 text-left"
-                    >
-                      Logout
-                    </button>
-                  </>
-                ) : (
+                
                   <div className="flex flex-col space-y-2">
-                    <Link
-                      to="/login"
-                      className="px-4 py-2 border border-yellow-600 text-yellow-600 rounded-md hover:bg-yellow-600 hover:text-white text-center"
-                    >
-                      Login
-                    </Link>
+                  
                     <Link
                       to="/register"
                       className="px-4 py-2 bg-yellow-600 text-white rounded-md hover:bg-yellow-700 text-center"
                     >
-                      Register
+                      Enrol Today
                     </Link>
                   </div>
-                )}
+                
               </div>
             </motion.div>
           )}

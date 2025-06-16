@@ -7,9 +7,6 @@ import Features from '../components/home/Features'
 import Hero from '../components/home/Hero'
 import Testimonials from '../components/home/Testiomonials'
 import Faqs from '../components/home/Faqs'
-import NewsletterSubscription from '../components/home/NewsLetterSubscription'
-
-
 
 const Home = () => {
   return (
@@ -32,7 +29,6 @@ const Home = () => {
       <Features/>
       <Hero/>
       <Testimonials/>
-      <NewsletterSubscription/>
       
     </div>
   )

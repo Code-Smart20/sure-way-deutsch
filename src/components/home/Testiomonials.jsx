@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
@@ -8,11 +7,6 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 function Testimonials() {
-  const [mounted, setMounted] = useState(false);
-  
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   // Testimonial data
   const testimonials = [
@@ -78,7 +72,7 @@ function Testimonials() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          {mounted && (
+          
             <Swiper
               slidesPerView={1}
               spaceBetween={20}
@@ -103,7 +97,7 @@ function Testimonials() {
             >
               {testimonials.map((testimonial) => (
                 <SwiperSlide key={testimonial.id}>
-                  <div className="bg-yellow-700 p-6 rounded-lg shadow-md h-full flex flex-col">
+                  <div className="bg-white text-neutral-700 p-6 rounded-lg shadow-md h-full flex flex-col">
                     <div className="flex items-center mb-4">
                       <img 
                         src={testimonial.image} 
@@ -132,7 +126,7 @@ function Testimonials() {
                 </SwiperSlide>
               ))}
             </Swiper>
-          )}
+          
         </motion.div>
       </div>
     </section>

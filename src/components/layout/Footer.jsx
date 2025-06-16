@@ -77,8 +77,8 @@ function Footer() {
 
 
           {/* Column 3: Our Courses */}
-          <div>
-            <h3 className="text-yellow-500 font-semibold text-lg mb-4">Our Courses</h3>
+          <div className="hidden">
+            <h3 className="text-yellow-500 font-semibold text-lg mb-4 ">Our Courses</h3>
             <ul className="space-y-2">
               <li><Link to="/courses?level=a1" className="text-neutral-300 hover:text-yellow-500 transition-colors">A1 Beginner</Link></li>
               <li><Link to="/courses?level=a2" className="text-neutral-300 hover:text-yellow-500 transition-colors">A2 Elementary</Link></li>
