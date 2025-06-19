@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { Link } from 'react-router-dom';
 
 function Cta() {
   
@@ -99,7 +100,9 @@ function Cta() {
         {testimonial.text}
       </h3>
       <button className="px-5 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded-full text-sm transition">
-        Join DeutschAkademie
+        
+        <Link to="/register"> Join DeutschAkademie</Link>
+       
       </button>
     </div>
   </div>

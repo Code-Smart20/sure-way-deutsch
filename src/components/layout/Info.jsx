@@ -15,13 +15,13 @@ const Info = () => {
         {/* Address */}
         <div className="flex items-center gap-2">
           <FaMapMarkerAlt className="text-blue-400" />
-          <span>123 Cloud Street, Abakaliki, Nigeria</span>
+          <span>123 Mammy Market, Navy Town,Lagos Nigeria</span>
         </div>
 
         {/* Email */}
         <div className="flex items-center gap-2">
           <FaEnvelope className="text-yellow-300" />
-          <span>info@deutsch.com</span>
+          <span>info@SureWayDeutsch.com</span>
         </div>
 
         {/* Opening Hours */}
