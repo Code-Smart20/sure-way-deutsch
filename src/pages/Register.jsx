@@ -24,7 +24,7 @@ function Register() {
       setError('');
       setLoading(true);
       await signup(data.email, data.password, data.name);
-      navigate('/dashboard');
+      navigate('/');
     } catch (error) {
       console.error('Registration error:', error);
       if (error.code === 'auth/email-already-in-use') {
