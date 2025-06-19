@@ -1,11 +1,11 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaBars, FaTimes} from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
@@ -15,7 +15,7 @@ function Navbar() {
   ];
 
   return (
-    <header className="w-full px-4  top-20 left-0 right-0 h-20 z-50 transition-all duration-300 text-white bg-black flex items-center">
+    <header className="w-full px-4 top-20 left-0 right-0 h-20 z-50 transition-all duration-300 text-white bg-black flex items-center">
       <div className="container mx-auto px-4 flex justify-between items-center w-full">
         <Link to="/" className="z-10 text-lg font-bold">
           SURE-WAY-DEUTSCH
@@ -39,15 +39,14 @@ function Navbar() {
             </NavLink>
           ))}
 
-            <div className="flex space-x-2 ml-4">
-              <Link
-                to="/register"
-                className="px-4 py-2 rounded-md bg-yellow-600 text-white hover:bg-yellow-700 text-sm"
-              >
-                Enrol Today
-              </Link>
-            </div>
-          
+          <div className="flex space-x-2 ml-4">
+            <Link
+              to="/register"
+              className="px-4 py-2 rounded-md bg-yellow-600 text-white hover:bg-yellow-700 text-sm"
+            >
+              Enrol Today
+            </Link>
+          </div>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -57,7 +56,6 @@ function Navbar() {
           aria-label={isOpen ? 'Close Menu' : 'Open Menu'}
         >
           {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-          
         </button>
 
         {/* Mobile Navigation */}
@@ -88,17 +86,15 @@ function Navbar() {
                   </NavLink>
                 ))}
 
-                
-                  <div className="flex flex-col space-y-2">
-                  
-                    <Link
-                      to="/register"
-                      className="px-4 py-2 bg-yellow-600 text-white rounded-md hover:bg-yellow-700 text-center"
-                    >
-                      Enrol Today
-                    </Link>
-                  </div>
-                
+                <div className="flex flex-col space-y-2">
+                  <Link
+                    to="/register"
+                    className="px-4 py-2 bg-yellow-900 text-white rounded-md hover:bg-yellow-500 text-center"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Enrol Today
+                  </Link>
+                </div>
               </div>
             </motion.div>
           )}
