@@ -27,7 +27,7 @@ const Info = () => {
         {/* Opening Hours */}
         <div className="flex items-center gap-2">
           <FaClock className="text-purple-400" />
-          <span>Mon–Fri: 8am – 6pm</span>
+          <span>Mon–Sat: 8am – 6pm</span>
         </div>
       </div>
     </div>

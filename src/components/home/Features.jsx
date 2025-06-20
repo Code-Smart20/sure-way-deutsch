@@ -90,7 +90,8 @@ function Features() {
     {features.map((feature, index) => (
       <motion.div
         key={index}
-        className="group bg-black text-white backdrop-blur-md rounded-xl border border-white/10 p-6 
+        style={{backgroundColor:"#0F1E47"}}
+        className="group text-white backdrop-blur-md rounded-xl border border-white/10 p-6 
                    hover:shadow-xl hover:scale-105 transition-all duration-300"
         variants={item}
       >
