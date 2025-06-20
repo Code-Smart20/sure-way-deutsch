@@ -3,7 +3,7 @@ import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope, FaClock } from 'react-icons/fa'
 
 const Info = () => {
   return (
-    <div className="bg-yellow-900 text-white text-sm py-2 px-4">
+    <div className="bg-gray-600 text-white text-sm py-2 px-4">
       <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
         
         {/* Phone */}
