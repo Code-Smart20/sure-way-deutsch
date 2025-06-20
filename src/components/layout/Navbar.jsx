@@ -10,7 +10,7 @@ function Navbar() {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Courses', path: '/courses' },
-    { name: 'Bloger', path: '/blog' },
+    { name: 'Bloge', path: '/blog' },
     { name: 'Contact', path: '/contact' },
   ];
 
