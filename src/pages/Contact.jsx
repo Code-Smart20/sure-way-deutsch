@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 import { useForm } from 'react-hook-form';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
-import { db } from '../firebase/config';
+import { db } from '../firebase/Config';
 
 function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
